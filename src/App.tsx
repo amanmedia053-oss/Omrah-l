@@ -613,6 +613,8 @@ const AboutScreen = () => {
         </p>
         <p className="mb-6 text-lg">
           زموږ موخه دا ده چې اسلامي علم په ساده، ښکلي او منظم ډول خلکو ته وړاندې کړو.
+          کاريال جوړوونکی: عبیدالله غفاري 
+          جمع او ترتيب: الحاج ډاکټر فريدون احرار 
         </p>
         <div className={`h-px w-20 mx-auto my-8 opacity-20 ${isDarkMode ? 'bg-white' : 'bg-black'}`} />
         <p className="font-bold text-center text-xl text-current" style={{ color: getAccentHex(accentColor) }}>
