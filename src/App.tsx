@@ -591,45 +591,57 @@ const AboutScreen = () => {
     </button>
   );
 
-  return (
-    <div className="px-6 status-bar-padding pb-32">
-      <div className="flex flex-col items-center mb-10 pt-6">
-        <div className={`w-24 h-24 rounded-[32px] flex items-center justify-center mb-6 shadow-2xl relative overflow-hidden
-          ${getAccentClass(accentColor)}`}>
-          <div className="absolute inset-0 opacity-20 islamic-pattern" />
-          <Info size={48} className="text-white relative z-10" />
-        </div>
-        <h1 className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>زموږ په اړه</h1>
+   return (
+  <div className="px-6 status-bar-padding pb-32">
+    <div className="flex flex-col items-center mb-10 pt-6">
+      <div className={`w-24 h-24 rounded-[32px] flex items-center justify-center mb-6 shadow-2xl relative overflow-hidden
+        ${getAccentClass(accentColor)}`}>
+        <div className="absolute inset-0 opacity-20 islamic-pattern" />
+        <Info size={48} className="text-white relative z-10" />
       </div>
-      
-      <div className={`p-8 rounded-[40px] mb-10 leading-relaxed text-justify relative overflow-hidden
-        ${isDarkMode ? 'bg-zinc-900 text-gray-300 border border-white/5' : 'bg-white shadow-sm border border-black/[0.03] text-gray-600'}`}>
-        <div className="absolute top-0 right-0 w-32 h-32 opacity-[0.03] islamic-pattern pointer-events-none" />
-        <p className="mb-6 text-lg">
-          دا اپ د عمرې اړوند مهم او ضروري آډيو درسونه وړاندې کوي، تر څو مسلمانان وکولای شي د عمرې طريقه، احکام او فضائل په اسانه توګه زده کړي.
-        </p>
-        <p className="mb-6 text-lg">
-          دا کاريال مکمل افلاین دی او د کارولو لپاره انټرنېټ ته اړتيا نه لري.
-        </p>
-        <p className="mb-6 text-lg">
-          زموږ موخه دا ده چې اسلامي علم په ساده، ښکلي او منظم ډول خلکو ته وړاندې کړو.
-          کاريال جوړوونکی: عبیدالله غفاري 
-          جمع او ترتيب: الحاج ډاکټر فريدون احرار 
-        </p>
-        <div className={`h-px w-20 mx-auto my-8 opacity-20 ${isDarkMode ? 'bg-white' : 'bg-black'}`} />
-        <p className="font-bold text-center text-xl text-current" style={{ color: getAccentHex(accentColor) }}>
-          الله تعالی دې زموږ دا هڅه قبوله کړي.
-        </p>
-      </div>
-
-      <div className="space-y-2">
-        <h3 className={`text-xs font-bold uppercase tracking-widest mb-4 opacity-40 px-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>اړيکه</h3>
-        <ContactBtn icon={Send} label="ټليګرام" color="bg-[#0088cc]" onClick={() => window.open('https://t.me/YOUR_USERNAME')} />
-        <ContactBtn icon={MessageCircle} label="واټساپ" color="bg-[#25D366]" onClick={() => window.open('https://wa.me/YOUR_NUMBER')} />
-        <ContactBtn icon={Mail} label="بريښناليک" color="bg-[#EA4335]" onClick={() => window.location.href = 'mailto:contact@example.com'} />
-      </div>
+      <h1 className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>زموږ په اړه</h1>
     </div>
-  );
+    
+    <div className={`p-8 rounded-[40px] mb-10 leading-relaxed text-justify relative overflow-hidden
+      ${isDarkMode ? 'bg-zinc-900 text-gray-300 border border-white/5' : 'bg-white shadow-sm border border-black/[0.03] text-gray-600'}`}>
+      <div className="absolute top-0 right-0 w-32 h-32 opacity-[0.03] islamic-pattern pointer-events-none" />
+      
+      <p className="mb-6 text-lg">
+        دا اپ د عمرې اړوند مهم او ضروري آډيو درسونه وړاندې کوي، تر څو مسلمانان وکولای شي د عمرې طريقه، احکام او فضائل په اسانه توګه زده کړي.
+      </p>
+
+      <p className="mb-6 text-lg">
+        دا کاريال مکمل افلاین دی او د کارولو لپاره انټرنېټ ته اړتيا نه لري.
+      </p>
+
+      <p className="mb-6 text-lg">
+        زموږ موخه دا ده چې اسلامي علم په ساده، ښکلي او منظم ډول خلکو ته وړاندې کړو. 
+      </p>
+
+      {/* نوي لينونه */}
+      <p className="mb-2 text-lg font-medium text-center">
+        کاريال جوړوونکی: عبيدالله غفاري
+      </p>
+
+      <p className="mb-6 text-lg font-medium text-center">
+        جمع او ترتيب: الحاج ډاکټر فريدون احرار
+      </p>
+
+      <div className={`h-px w-20 mx-auto my-8 opacity-20 ${isDarkMode ? 'bg-white' : 'bg-black'}`} />
+      
+      <p className="font-bold text-center text-xl text-current" style={{ color: getAccentHex(accentColor) }}>
+        الله تعالی دې زموږ دا هڅه قبوله کړي.
+      </p>
+    </div>
+
+    <div className="space-y-2">
+      <h3 className={`text-xs font-bold uppercase tracking-widest mb-4 opacity-40 px-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>اړيکه</h3>
+      <ContactBtn icon={Send} label="ټليګرام" color="bg-[#0088cc]" onClick={() => window.open('https://t.me/obaidapp')} />
+      <ContactBtn icon={MessageCircle} label="واټساپ" color="bg-[#25D366]" onClick={() => window.open('https://wa.me/93779705897')} />
+      <ContactBtn icon={Mail} label="بريښناليک" color="bg-[#EA4335]" onClick={() => window.location.href = 'mailto: obaidkhanghafari@gmail.com'} />
+    </div>
+  </div>
+);
 };
 
 // --- Main App ---
